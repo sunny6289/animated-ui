@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html , body{
+    min-height: 100vh;
+    width: 100%;
+} 
+
+/* Navigation */
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+.logo{
+    color: black;
+    font-weight: 500;
+    font-size: 35px;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links>a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.sign-in{
+    background-color: rgb(140, 140, 255);
+    padding: 4px 10px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+/* Main Content */
+.main-content{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 80px;
+    
+}
+.hero1{
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.hero1-img{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    left: -1000px;
+    background-image: url('hero1.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    animation: image-flash-left 2s 1 forwards;
+    animation-timing-function: cubic-bezier(0.5, -0.5, 0, 1.5);
+}
+.hero-text{
+    width: 50%;
+    position: relative;
+    top: -160px;
+    opacity: 0;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 75px;
+    animation: hero-text-flash 1s 1 forwards;
+    animation-delay: 2s;
+}
+.hero-text>span{
+    color: rgb(140, 140, 255);
+}
+.banner{
+    height: 400px;
+    width: 100%;
+    position: relative;
+    bottom: -400px;
+    background-image: url('banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    overflow: hidden;
+    animation: bannetUp 2s 1 forwards;
+    animation-delay: 2s;
+}
+.banner-dark{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.461);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.banner-text{
+    color: white;
+    font-size: 75px;
+    font-weight: 600;
+}
+.hero2{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+}
+.hero2-img{
+    height: 100%;
+    width: 50%;
+    background-image: url('hero2.jpg');
+    border-radius: 30px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.store-overview{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.store-overview>h1{
+    font-size: 75px;
+    font-weight: 600;
+}
+.store-overview>h1>span{
+    color: rgb(140, 140, 255);
+}
+.product-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.name-view-all{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.name-view-all>h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.name-view-all>span{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.name-view-all>span:hover{
+    text-decoration: underline;
+}
+.product-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: hidden;
+}
+.product{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative
+    
+}
+.product>img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    padding: 10px 60px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.follow-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.icons>i{
+    cursor: pointer;
+}
+.icons>i:hover{
+    color: rgb(140, 140, 255);
+}
+.follow-us>h3{
+    color: rgba(128, 128, 128, 0.648);
+    font-size: 15px;
+    font-weight: 400;
+}
+footer>p{
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.648);
+    font-weight: 400;
+}
+
+
+
+/* Animation starts here */
+@keyframes image-flash-left {
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes hero-text-flash {
+    0%{
+        top: -160px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes bannetUp {
+    0%{
+        bottom: -400px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
